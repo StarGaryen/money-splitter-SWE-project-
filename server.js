@@ -44,7 +44,24 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-
+//------------------------------above this fuckery of intelliJ---------------------------------------------\\
 
 
 console.log("fuck this is awesome");
+order(1);
+order(2);
+
+function order(customer) {
+    console.log("order recieved " + customer);
+    database(function () {
+        console.log("order ready for customer" + customer);
+    });
+
+
+}
+
+function database(callback){
+
+    setTimeout(callback,2000);
+}
+
