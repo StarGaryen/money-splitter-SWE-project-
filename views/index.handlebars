@@ -1,0 +1,99 @@
+ <h2 class="text-muted" >DashBoard</h2>
+<!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
+     Add Group
+ </button>
+ <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm1">
+     Add Member
+ </button>
+ <table></table>
+<!-- Modal -->
+<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Add group Details
+                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+                
+               <form method="post" action="/users/addgroup">
+                <div class="form-group">
+                  <label>Group Name</label>
+                  <input type="text" class="form-control" name="group_name" placeholder="group name" required>
+                </div>
+                <div class="form-group">
+                  <label>Group Description</label>
+                  <input type="text" class="form-control" name="group_description" placeholder="group description details" required>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+                
+                
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">
+                            Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <div class="modal fade" id="myModalNorm1" tabindex="-1" role="dialog"
+      aria-labelledby="myModalLabel" aria-hidden="true">
+     <div class="modal-dialog">
+         <div class="modal-content">
+             <!-- Modal Header -->
+             <div class="modal-header">
+                 <button type="button" class="close"
+                         data-dismiss="modal">
+                     <span aria-hidden="true">&times;</span>
+                     <span class="sr-only">Close</span>
+                 </button>
+                 <h4 class="modal-title" id="myModalLabel">
+                     Add member Details
+                 </h4>
+             </div>
+
+             <!-- Modal Body -->
+             <div class="modal-body">
+
+                 <form method="post" action="/users/addmember">
+                     <div class="form-group">
+                         <label>Group Name</label>
+                         <input type="text" class="form-control" name="group_name" placeholder="group name" required>
+                     </div>
+                     <div class="form-group">
+                         <label>Member email</label>
+                         <input type="email" class="form-control" name="member_email" placeholder="email of the member" required>
+                     </div>
+                     <button type="submit" class="btn btn-default">Submit</button>
+                 </form>
+
+
+             </div>
+
+             <!-- Modal Footer -->
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-default"
+                         data-dismiss="modal">
+                     Close
+                 </button>
+             </div>
+         </div>
+     </div>
+ </div>
